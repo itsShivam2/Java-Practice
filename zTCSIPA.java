@@ -104,9 +104,14 @@ public class zTCSIPA {
         // reverseString(str10);
 
         // 16
-        System.out.println("Enter the number: ");
-        int n = sc.nextInt();
-        isPerfect(n);
+        // System.out.println("Enter the number: ");
+        // int n = sc.nextInt();
+        // isPerfect(n);
+
+        // 19
+        System.out.println("Enter the string: ");
+        String str11 = sc.nextLine();
+        removeDuplicate(str11);
 
         sc.close();
     }
@@ -124,8 +129,7 @@ public class zTCSIPA {
 
         // Alternative
         int count = 0;
-        for(int i=0; i<strlen; i++)
-        {
+        for (int i = 0; i < strlen; i++) {
             if (Character.isLowerCase(s.charAt(i))) {
                 count++;
             }
@@ -377,16 +381,34 @@ public class zTCSIPA {
             System.out.println("Not perfect");
     }
 
-
     // 17. Find the index of a character in a string
     // 18. Find the number of lowercase characters in a string
-    // 19. Find the number of duplicate characters in a string, ignore them and print the rest
+
+    // 19. Find the number of duplicate characters in a string, ignore them and
+    // print the rest
+    public static void removeDuplicate(String s) {
+        List<Character> list = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (!list.contains(ch)) {
+                list.add(ch);
+            }
+        }
+        String str = "";
+        for (int i = 0; i < list.size(); i++)
+            str += list.get(i);
+
+        System.out.println(str);
+    }
     // 20. Find the number of characters and spaces in a string
-    // 21. Print the last character of every word in a string, ignore spaces and digits
-    // 22. Print number of spaces in a string, if greater than 3, print count else nan 
+    // 21. Print the last character of every word in a string, ignore spaces and
+    // digits
+    // 22. Print number of spaces in a string, if greater than 3, print count else
+    // nan
     // 23. Print all vowels in a string as it is, which are present at index 0
     // 24. Find characters of a string at odd indices
-    // 25. Calculate sum of digits of a number, if sum%3==0, print true else print false
+    // 25. Calculate sum of digits of a number, if sum%3==0, print true else print
+    // false
     // 26. Find largest word in a string, if two words have same length print first
     // 27. Find the first non repeating character in a string
     // 28. Find the number of even digits in a number
@@ -394,57 +416,6 @@ public class zTCSIPA {
     // 30. Reverse a string, print all characters in lowercase
     // 31. Print smallest vowel in a string
     // 32. First palindrome in an array of words
-    // 33. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // 33.
 
 }

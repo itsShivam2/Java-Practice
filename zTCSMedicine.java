@@ -36,15 +36,16 @@ public class zTCSMedicine {
 
         //     }
         // }
-        List<int>matchingPrices=new ArrayList<>();
+        List<Integer> matchingPrices = new ArrayList<>();
         for (Medicine medicine : medicines) {
             if (medicine.getdisease().equalsIgnoreCase(disease)) {
                 matchingPrices.add(medicine.getprice());
             }
-            if(matchingPrices.isEmpty())
-        return null;
-        else
-            return matchingPrices.stream().mapToInt(Integer::intValue).toArray();
+            if (matchingPrices.isEmpty())
+                return null;
+            else
+                return matchingPrices.stream().mapToInt(Integer::intValue).toArray();
+        }
     }
 }
 
