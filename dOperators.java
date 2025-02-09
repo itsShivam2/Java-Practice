@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class dOperators {
-    
+
     public static void main(String[] args) {
         // Types of Operators
         // 1. Arithmetic Operators
@@ -50,13 +50,20 @@ public class dOperators {
         int g = 20;
         System.out.println(f > e && f < g);
         System.out.println(f > e || f < g);
+        System.out.println(!(f > e));
 
-        // Bitwise Operators => & | ^ ~ << >> >>>     (<< is left shift operator, >> is right shift operator)
-        // Bitwise operator is used to perform bitwise operations on individual bits of a number.
-        // The result of the bitwise operation is a number with the same number of bits as the operands.
-        // The result is 0 if the operation is not performed on the bit and 1 if the operation is performed on the bit.
-        // The bitwise operators are used to perform operations on individual bits of a number.
-        // The result of the bitwise operation is a number with the same number of bits as the operands.
+        // Bitwise Operators => & | ^ ~ << >> >>> (<< is left shift operator, >> is
+        // right shift operator)
+        // Bitwise operator is used to perform bitwise operations on individual bits of
+        // a number.
+        // The result of the bitwise operation is a number with the same number of bits
+        // as the operands.
+        // The result is 0 if the operation is not performed on the bit and 1 if the
+        // operation is performed on the bit.
+        // The bitwise operators are used to perform operations on individual bits of a
+        // number.
+        // The result of the bitwise operation is a number with the same number of bits
+        // as the operands.
 
         // Unary Operators => ++ --
         int h = 10;
@@ -64,7 +71,7 @@ public class dOperators {
         System.out.println(h--);
         System.out.println(++h);
         System.out.println(--h);
-        
+
         // Ternary/Conditional Operator
         int i = 10;
         int j = 20;

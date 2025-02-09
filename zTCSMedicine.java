@@ -19,6 +19,7 @@ public class zTCSMedicine {
         String disease = sc.nextLine();
 
         int price = getPriceByDisease(medicines, disease);
+
         if (price == 0)
             System.out.println("No such medicine");
         else
@@ -27,25 +28,15 @@ public class zTCSMedicine {
         sc.close();
     }
 
-    public static int[] getPriceByDisease(Medicine[] medicines, String disease) {
-        // int[] arr = new int[0];
-        // for (int i = 0; i < medicines.length; i++) {
-        //     if (medicines[i].getdisease().equalsIgnoreCase(disease)) {
-        //         arr = Arrays.copyOf(arr, arr.length + 1);
-        //         arr[arr.length - 1] = medicines[i].getprice();
-
-        //     }
-        // }
-        List<Integer> matchingPrices = new ArrayList<>();
+    public static int getPriceByDisease(Medicine[] medicines, String disease) {
         for (Medicine medicine : medicines) {
             if (medicine.getdisease().equalsIgnoreCase(disease)) {
-                matchingPrices.add(medicine.getprice());
+                return medicine.getprice();
             }
-            if (matchingPrices.isEmpty())
-                return null;
-            else
-                return matchingPrices.stream().mapToInt(Integer::intValue).toArray();
         }
+
+        // If no matching medicine is found, return 0
+        return 0;
     }
 }
 
@@ -55,6 +46,7 @@ class Medicine {
     private String disease;
     private int price;
 
+    // Constructor to initialize Medicine object
     public Medicine(String name, String batch, String disease, int price) {
         this.name = name;
         this.batch = batch;
@@ -78,6 +70,7 @@ class Medicine {
         return price;
     }
 
+    // Setters for the Medicine attributes
     public void setname(String name) {
         this.name = name;
     }
